@@ -1,0 +1,767 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+/* Global End */
+
+/* Opening */
+
+        /* Opening Animation Container */
+        .opening-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 5s ease; /* Updated transition duration */
+            font-family: 'Merriweather', serif; /* Menggunakan font Merriweather */
+            color: #7d697d; /* Warna font */
+        }
+
+        .opening-animation h1 {
+            font-size: 48px;
+        }
+
+        .opening-animation h3 {
+            font-size: 24px;
+        }
+
+        /* Animasi untuk Menghilangkan Elemen Pembuka */
+        .fade-out {
+            opacity: 0;
+            display: none;
+        }
+
+/* CODE 01 HEADER START */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Merriweather', serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+header.scrolled {
+    background-color: #FFFFFF; /* Tetap putih, hanya elemen di dalamnya berubah warna */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header .logo-img.hover {
+    display: none;
+}
+
+header .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #800080; /* Warna ungu */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header.scrolled .logo-text {
+    color: #bcaf64; /* Warna emas saat digulir */
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Menyelaraskan menu dan kolom pencarian */
+}
+
+header nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #800080; /* Warna ungu */
+    font-size: 16px; /* Mengurangi ukuran font */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+header.scrolled nav a {
+    color: #bcaf64; /* Warna emas saat digulir */
+}
+
+header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .dropdown .dropdown-toggle {
+    cursor: pointer;
+    color: #800080; /* Warna ungu */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+header.scrolled .dropdown .dropdown-toggle {
+    color: #bcaf64; /* Warna emas saat digulir */
+}
+
+header .dropdown .dropdown-menu {
+    display: none; /* Menu dropdown tersembunyi secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+header .dropdown .dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: #800080; /* Warna ungu */
+    padding: 8px 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header.scrolled .dropdown .dropdown-menu a {
+    color: #bcaf64; /* Warna emas saat digulir */
+}
+
+.search-bar {
+    display: flex; /* Menyelaraskan kolom pencarian dengan menu */
+    align-items: center;
+    margin-left: 20px; /* Memberikan jarak dari menu sebelah kiri */
+}
+
+.search-bar input {
+    border: 1px solid #800080; /* Warna ungu */
+    padding: 5px;
+    border-radius: 4px;
+    color: #800080; /* Warna ungu */
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+header.scrolled .search-bar input {
+    border-color: #bcaf64; /* Warna emas saat digulir */
+    color: #bcaf64; /* Warna placeholder emas saat digulir */
+}
+
+.search-bar input::placeholder {
+    color: #800080; /* Warna ungu */
+}
+
+header.scrolled .search-bar input::placeholder {
+    color: #bcaf64; /* Warna emas saat digulir */
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.search-bar button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #800080; /* Warna ungu */
+    transition: stroke 0.3s ease;
+}
+
+header.scrolled .search-bar button svg {
+    stroke: #bcaf64; /* Warna emas saat digulir */
+}
+
+/* Hover effects */
+header .logo-container:hover .normal {
+    display: none;
+}
+
+header .logo-container:hover .hover {
+    display: block;
+}
+
+header .logo-text:hover,
+header nav a:hover,
+header .dropdown .dropdown-toggle:hover,
+header .dropdown .dropdown-menu a:hover,
+.search-bar input:hover {
+    color: #bcaf64; /* Warna emas */
+    border-color: #bcaf64; /* Warna emas */
+}
+.placeholder { color: #bcaf64; /* Warna emas */
+    border-color: #bcaf64; /* Warna emas */
+}
+
+
+.search-bar button:hover svg {
+    stroke: #bcaf64; /* Warna emas */
+}
+
+/* CODE 01 HEADER END */
+
+
+
+/* MAIN */
+main {
+    padding: 20px;
+}
+/* MAIN */
+
+
+
+/* Ubah warna font H1 dan hover */
+h1 {
+    color: #800080;
+}
+
+h1:hover {
+    color: #bcaf64;
+}
+
+/* Ubah warna font paragraf <p> dan hover */
+p {
+    color: #666;
+}
+
+p:hover {
+    color: #7d697d;
+}
+
+/* CODE 02 Hero Start */
+/* Main Content Section */
+/* Section Container dengan Background Gambar */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif; /* Konsisten dengan header */
+    /* background-image: url('Blog Banner for Website Content.png'); */
+    background-size: cover; /* Gambar memenuhi area */
+    background-position: center; /* Gambar dipusatkan */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+}
+
+/* Copy Writing Box */
+.copy-writing {
+    width: 45%;
+    background: rgba(255, 255, 255, 0.8); /* Warna putih dengan transparansi */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    font-family: 'Merriweather', serif; /* Font klasik */
+}
+
+.copy-writing h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #800080; /* Warna konsisten dengan header */
+}
+
+.copy-writing p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.copy-writing button {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: #800080; /* Warna biru kehijauan */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.copy-writing button:hover {
+    background-color: #800080; /* Warna hijau lebih gelap */
+    transform: translateY(-2px); /* Efek hover */
+}
+
+/* Image Slider */
+.image-slider {
+    width: 45%;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Sudut membulat */
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.image-slider .slide {
+    display: none;
+    text-align: center;
+    background-color: #FFFFFF; /* Background putih */
+}
+
+.image-slider .slide.active {
+    display: block;
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Slider Navigation Buttons */
+.image-slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Tombol navigasi membulat */
+    transition: background-color 0.3s ease;
+}
+
+.image-slider button:hover {
+    background: rgba(0, 0, 0, 0.7); /* Background lebih gelap saat hover */
+}
+
+.image-slider .prev {
+    left: 10px;
+}
+
+.image-slider .next {
+    right: 10px;
+}
+
+/* CODE 02 Hero End */
+
+
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Section container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CODE 03 ABOUT START */
+#about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 32px;
+    color: #800080;
+}
+
+#about p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+
+
+
+/* Galery */
+/* Container for the Abstract Gallery */
+.abstract-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Gallery Boxes */
+.gallery-box {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Different Shapes */
+.gallery-box.square {
+    width: 48%;
+    padding-top: 48%;
+}
+
+.gallery-box.rectangle {
+    width: 98%;
+    padding-top: 30%;
+}
+
+.gallery-box.box {
+    width: 48%;
+    padding-top: 30%;
+}
+
+.gallery-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-slide {
+    display: none;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.gallery-slide.active {
+    display: block;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-slide h3 {
+    font-family: 'Merriweather', serif;
+    color: #800080;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.gallery-slide p {
+    font-family: 'Arial', sans-serif;
+    color: #666;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.gallery-slide h3:hover {
+    color: #bcaf64;
+}
+
+.gallery-slide p:hover {
+    color: #7d697d;
+}
+
+
+
+
+/* CODE 04 FIND THE RESERVE START */
+#find-the-reserve {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#find-the-reserve h2 {
+    font-size: 32px;
+    color: #800080
+}
+
+.reserve-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.reserve-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 28%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.reserve-item h3 {
+    font-size: 24px;
+    color: #800080;
+}
+
+.reserve-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* CODE 05 GUEST COMMENT START */
+#guest-comment {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#guest-comment h2 {
+    font-size: 32px;
+    color: #800080;
+}
+
+.comments {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.comment {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.comment p {
+    font-size: 16px;
+    color: #666;
+}
+
+.comment strong {
+    font-size: 18px;
+    color: #800080;
+}
+
+/* CODE 06 CONTACT START */
+#contact {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: #800080;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#contact form button {
+    background-color: #800080;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #bcaf64;
+}
+
+
+
+
+
+
+
+/* CODE 07 BUTTON START */
+/* Kontainer untuk tombol WA, Email, dan Telepon */
+.contact-buttons {
+    position: fixed;
+    right: 20px; /* Jarak dari sisi kanan */
+    bottom: 20px; /* Jarak dari bawah */
+    z-index: 1000; /* Agar tombol tetap di atas konten lainnya */
+    display: flex;
+    flex-direction: column; /* Menempatkan tombol dalam kolom */
+    gap: 15px; /* Jarak antara tombol */
+}
+
+/* Tombol kontak */
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #25D366; /* Warna tombol WA */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+/* Tombol Email */
+.contact-button.email {
+    background-color: #0077B5; /* Warna tombol Email */
+}
+
+/* Tombol Telepon */
+.contact-button.phone {
+    background-color: #34b7f1; /* Warna tombol Telepon */
+}
+
+/* Gambar ikon tombol */
+.contact-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Efek hover untuk tombol */
+.contact-button:hover {
+    transform: scale(1.1); /* Efek besar sedikit saat hover */
+}
+
+/* Tombol WhatsApp */
+.contact-button.wa {
+    background-color: #25D366; /* Warna tombol WA */
+}
+
+/* Hover efek untuk tombol WhatsApp */
+.contact-button.wa:hover {
+    background-color: #128C7E; /* Warna lebih gelap saat hover */
+}
+
+/* Tombol Email */
+.contact-button.email:hover {
+    background-color: #005B7F; /* Warna lebih gelap saat hover */
+}
+
+/* Tombol Telepon */
+.contact-button.phone:hover {
+    background-color: #007B9F; /* Warna lebih gelap saat hover */
+}
+
+.contact-icon {
+    font-size: 30px;  /* Ukuran ikon */
+    
+}
+/* Kontainer tombol */
+.contact-buttons {
+    position: fixed; /* Tombol akan tetap di sisi kanan saat di-scroll */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Agar tombol tepat di tengah vertikal */
+    z-index: 1000;
+}
+
+/* Tombol individu */
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    background-color: #25D366; /* Warna WhatsApp, ganti untuk tombol lain */
+    margin: 10px 0; /* Memberi jarak antar tombol */
+    color: #fff; /* Warna ikon */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    font-size: 24px; /* Ukuran ikon */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk tombol */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efek */
+.contact-button:hover {
+    background-color: #128C7E; /* Warna lebih gelap saat hover */
+}
+
+/* Ikon */
+.contact-icon {
+    display: inline-block;
+    font-size: 30px; /* Ukuran ikon */
+    text-align: center;
+}
+
+
+/* CODE 07 BUTTON END */
+
+/* CODE 10 FOOTER START */
+
+footer {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  footer a {
+    color: #800080;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #555;
+  }
+  footer img {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+  footer img:hover {
+    filter: none;
+  }
+  footer p {
+    color: #666; /* Warna teks yang tidak terlalu pekat */
+  }
+  
+/* CODE 10 FOOTER END */

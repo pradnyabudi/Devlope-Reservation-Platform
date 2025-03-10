@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVATION PROJECT</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+
+    <!-- Tambahkan Font Awesome -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+<!-- Opening Animation Container -->
+<div id="opening-animation" class="opening-animation">
+    <h1>Welcome To Bali</h1>
+    <center><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></center>
+</div>
+
+<!-- The rest of your page content -->
+
+<!-- CODE 01 HEADER START -->
+<header>
+    <div class="logo-container">
+        <img src="Logo.png" alt="Logo Normal" class="logo-img normal">
+        <img src="Logo Hover.png" alt="Logo Hover" class="logo-img hover" style="display: none;">
+        <div class="logo-text">YOUR NAME</div>
+    </div>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <div class="dropdown">
+            <a href="#find-the-reserve" class="dropdown-toggle">FIND THE RESERVE &#9662;</a>
+            <div class="dropdown-menu">
+                <a href="#">HOTEL</a>
+                <a href="#">VILLA</a>
+                <a href="#">RESORT</a>
+            </div>
+        </div>
+        <a href="#guest-comment">GUEST COMMENT</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button class="search-icon" onclick="performSearch()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#800080" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="10" cy="10" r="7"></circle>
+                <line x1="16" y1="16" x2="20" y2="20"></line>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- CODE 01 HEADER END -->
+
+<!-- MAIN -->
+</main>
+<!-- MAIN -->
+
+
+<!-- CODE 02 Hero Start -->
+<section class="main-content">
+    <div class="copy-writing">
+        <h2>Copy Writing</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cum libero doloribus eos quam ex, explicabo tempore nulla saepe quidem veniam sequi impedit consectetur eaque sed! Modi labore odit at?</p>
+        <button>Offering</button>
+        <button>Book Now</button>
+    </div>
+    <div class="image-slider">
+        <div class="slide active">
+            <img src="example 1.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="example 2.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="example3.png" alt="">
+        </div>
+        <button class="prev">&#8249;</button>
+        <button class="next">&#8250;</button>
+    </div>
+</section>
+
+<!-- CODE 02 Hero End -->
+
+<!-- CODE 03 ABOUT START -->
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellat aliquam eum eligendi explicabo, eveniet voluptatum quasi ad veniam ratione? Debitis rerum minus delectus sint atque repudiandae cupiditate a officiis..</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque assumenda voluptates reiciendis quo earum placeat aspernatur repudiandae, harum ex perferendis porro aut provident ab deleniti quam neque nulla adipisci inventore?</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam iste sed id? Sit quibusdam cupiditate voluptas numquam dolorem ducimus doloribus incidunt qui temporibus. Laborum blanditiis soluta quaerat distinctio architecto?</p>
+    </div>
+</section>
+
+
+<section>
+    <!-- Container for the Gallery -->
+<div class="abstract-gallery-container">
+    <!-- Kotak 1 (Persegi) -->
+    <div class="gallery-box square">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example4.png" alt="Image 1">
+                <a href=""><h3>Offering</h3></a>
+            
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 2">
+                <h3>Offering</h3>
+                
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 3">
+                <a href=""><h3>Offering</h3></a>
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Kotak 4 (Persegi) -->
+    <div class="gallery-box square">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example4.png" alt="Image 16">
+                <a href=""><h3>Offering</h3></a>
+                
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 11">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 12">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kotak 2 (Persegi Panjang) -->
+    <div class="gallery-box rectangle">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example 1.png" alt="Image 4">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example 2.png" alt="Image 5">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example 2.png" alt="Image 6">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kotak 3 (Kotak) -->
+    <div class="gallery-box box">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example4.png" alt="Image 7">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 8">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 9">
+                <a href=""><h3>Offering</h3></a>s
+            </div>
+        </div>
+    </div>
+    <!-- Kotak 6 (Kotak) -->
+    <div class="gallery-box box">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example4.png" alt="Image 10">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 17">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example4.png" alt="Image 18">
+                <h3>Judul Gambar 18</h3>
+                <p>Deskripsi singkat untuk gambar 18.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kotak 5 (Persegi Panjang) -->
+    <div class="gallery-box rectangle">
+        <div class="gallery-slider">
+            <div class="gallery-slide active">
+                <img src="example 1.png" alt="Image 13">
+                <a href=""><h3>Offering</h3></a>
+            </div>
+            <div class="gallery-slide">
+                <img src="example 2.png" alt="Image 14">
+                <h3>Judul Gambar 14</h3>
+                <p>Deskripsi singkat untuk gambar 14.</p>
+            </div>
+            <div class="gallery-slide">
+                <img src="example 1.png" alt="Image 15">
+                <h3>Judul Gambar 15</h3>
+                <p>Deskripsi singkat untuk gambar 15.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- CODE 03 ABOUT END -->
+
+<!-- CODE 04 FIND THE RESERVE START -->
+<section id="find-the-reserve">
+    <div class="container">
+        <h2>Find The Reserve</h2>
+        <div class="reserve-options">
+            <div class="reserve-item">
+                <h3>Hotels</h3>
+                <p>Find the best hotels with excellent services and facilities.</p>
+            </div>
+            <div class="reserve-item">
+                <h3>Villas</h3>
+                <p>Enjoy the luxury of staying in beautiful villas for your vacation.</p>
+            </div>
+            <div class="reserve-item">
+                <h3>Resorts</h3>
+                <p>Relax and rejuvenate at the most peaceful and beautiful resorts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CODE 04 FIND THE RESERVE END -->
+
+<!-- CODE 05 GUEST COMMENT START -->
+<section id="guest-comment">
+    <div class="container">
+        <h2>Guest Comments</h2>
+        <div class="comments">
+            <div class="comment">
+                <p>"Amazing stay! The villa was beautiful, and the service was excellent. Highly recommended!"</p>
+                <p><strong>- Jane Doe</strong></p>
+            </div>
+            <div class="comment">
+                <p>"The resort was exactly what I needed for a relaxing getaway. Would love to visit again."</p>
+                <p><strong>- John Smith</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CODE 05 GUEST COMMENT END -->
+
+<!-- CODE 06 CONTACT START -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+<!-- CODE 06 CONTACT END -->
+
+<!--CODE 07 BUTTON START -->
+
+<div class="contact-buttons">
+    <!-- Tombol WhatsApp -->
+    <a href="https://wa.me/1234567890" target="_blank" class="contact-button wa">
+        <i class="fab fa-whatsapp contact-icon"></i>
+    </a>
+
+    <!-- Tombol Email -->
+    <a href="mailto:email@example.com" class="contact-button email">
+        <i class="fas fa-envelope contact-icon"></i>
+    </a>
+
+    <!-- Tombol Telepon -->
+    <a href="tel:+1234567890" class="contact-button phone">
+        <i class="fas fa-phone contact-icon"></i>
+    </a>
+</div>
+
+
+
+<!--CODE 07 BUTTON END -->
+
+
+
+<!-- CODE 08 FOOTER START -->
+
+<footer>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <p>Jl. Buahan No. 1 Payangan - Bali 80572 Indonesia</p>
+        <p>Phone: <a href="tel:+62361752111" style="color: #800080;">+62 345 678</a></p>
+        <p>Copyright © 2035 All rights reserved - Your Name</p>
+      </div>
+      <div style="text-align: center;">
+        <p>FOLLOW US</p>
+        <a href="#" target="_blank" style="margin-right: 10px;">
+          <i class="fa fa-facebook-square" style="font-size:24px"></i>
+        </a>
+        <a href="#" target="_blank" style="margin-right: 10px;">
+          <i class="fa fa-instagram" style="font-size:24px"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa fa-youtube-play" style="font-size:24px"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+<!-- CODE 08 FOOTER END -->
+
+</body>
+</html>
